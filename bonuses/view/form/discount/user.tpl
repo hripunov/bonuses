@@ -1,0 +1,2 @@
+{static_call var=user callback=['\Users\Model\Orm\User','loadByWhere'] params=[['id'=>$elem.bonus_user_id]]}
+<a target="_blank" href="{$router->getAdminUrl('edit',['id'=>$elem.bonus_user_id],'users-ctrl')}">{$user->getFio()} ({$elem.bonus_user_id})</a>

@@ -1,0 +1,67 @@
+.bonusCardRound{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.bonusCardRound.active{
+    background-color: green;
+}
+
+.admin-style .bonusesForOrderByRulesTitle,
+.admin-style .bonusesForOrderUsualWrapper{
+    display: inline-block;
+}
+
+.admin-style .bonusesForOrderType{
+    width: 50px;
+}
+
+.admin-style .bonusesForOrderRulesWrapper{
+    margin-bottom: 10px;
+}
+
+
+.admin-style .bonusesForOrderRulesWrapper thead th{
+    background-color: #ebebeb;
+    color: black;
+    padding: 5px;
+}
+
+.admin-style .bonusesForOrderRulesWrapper tbody tr{
+    border-bottom: 1px solid silver;
+}
+
+.admin-style .bonusesForOrderRulesWrapper tbody tr:last-child{
+    border-bottom: none;
+}
+
+.admin-style .closeBonusForOrderItem{
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.admin-style .bonusesForOrderRulesWrapper input[type="number"]{
+    width: 80px;
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.admin-style .bonusesForOrderRulesWrapper input[type="number"]::-webkit-outer-spin-button,
+.admin-style .bonusesForOrderRulesWrapper input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.admin-style .mb-10{
+    margin-bottom: 10px;
+}
+
+.admin-style .mb-20{
+    margin-bottom: 20px;
+}
+
+.admin-style .mt-10{
+    margin-top: 10px;
+}

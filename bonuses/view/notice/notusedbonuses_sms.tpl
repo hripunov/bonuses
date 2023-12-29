@@ -1,0 +1,1 @@
+{t lastdate=$data->last_date bonuses=$data->bonuses url=$url->getDomainStr()}Ваша скидка в %bonuses бонусных баллов сгорит %lastdate. %url{/t}

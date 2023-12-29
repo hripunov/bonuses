@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <defaultValues>
+        <name multilanguage="true">Бонусная программа</name>
+        <description multilanguage="true">Позволяет использовать бонусы в интернет-магазине</description>        
+        <version>6.8.0</version>
+        <core_version>>=4.1.52</core_version>
+        <author>Zakusilo Alexander</author>
+        <discount_register_price_id>0</discount_register_price_id>
+        <bonuses_for_birthday>0</bonuses_for_birthday>
+        <bonuses_for_register>0</bonuses_for_register>
+        <bonuses_for_first_order>0</bonuses_for_first_order>
+        <bonuses_lifetime>0</bonuses_lifetime>
+        <bonuses_lifetime_notify>0</bonuses_lifetime_notify>
+        <bonuses_lifetime_notify2>0</bonuses_lifetime_notify2>
+        <min_bonuses_add_to_bonuses>0</min_bonuses_add_to_bonuses>
+        <can_use_coupon>0</can_use_coupon>
+        <bonuses_for_order_as_table>0</bonuses_for_order_as_table>
+        <bonuses_for_order>0</bonuses_for_order>
+        <bonuses_for_order_type>0</bonuses_for_order_type>
+        <bonuses_for_order_status>4</bonuses_for_order_status>
+        <equal_bonuses_number>1</equal_bonuses_number>
+        <min_product_cost>0</min_product_cost>
+        <max_percent_to_discount>0</max_percent_to_discount>
+        <min_percent_to_discount>0</min_percent_to_discount>
+        <min_cart_summ>0</min_cart_summ>
+        <min_cart_summ_last>0</min_cart_summ_last>
+        <use_min_max_cart_rules>0</use_min_max_cart_rules>
+        <default_dir_bonuses_units>0</default_dir_bonuses_units>
+        <default_dir_bonuses_units_type>0</default_dir_bonuses_units_type>
+        <discount_admin_not_usage>1</discount_admin_not_usage>
+        <disable_product_by_action>0</disable_product_by_action>
+        <use_default_price_for_sale>0</use_default_price_for_sale>
+        <disable_payment_with_discount>0</disable_payment_with_discount>
+        <disable_delivery_with_discount>0</disable_delivery_with_discount>
+        <orders_count_before_use>0</orders_count_before_use>
+        <disable_use_product_by_action_in_cart>0</disable_use_product_by_action_in_cart>
+        <use_min_summ_to_apply_by_actions>0</use_min_summ_to_apply_by_actions>
+        <show_bonus_card_section>1</show_bonus_card_section>
+        <show_bonus_card_register>0</show_bonus_card_register>
+        <bonuscard_cashback_for_activation>0</bonuscard_cashback_for_activation>
+        <bonuscard_cashback>0</bonuscard_cashback>
+        <bonuscard_cashback_type>0</bonuscard_cashback_type>
+        <bonuscard_cashback_days>365</bonuscard_cashback_days>
+        <min_partner_cashbackout>0</min_partner_cashbackout>
+        <disable_add_bonuses_if_already_have>0</disable_add_bonuses_if_already_have>
+        <add_bonus_for_comment_product>0</add_bonus_for_comment_product>
+        <add_for_comment_for_buyed_product>1</add_for_comment_for_buyed_product>
+        <add_for_comment_only_once>0</add_for_comment_only_once>
+    </defaultValues>
+</config>

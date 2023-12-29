@@ -1,0 +1,236 @@
+.allBonusesWrapper{
+    border: 1px solid silver;
+    padding: 7px;
+    margin: 10px 0px;
+}
+
+.allBonusesWrapper .bonuses{
+    color: green;
+}
+
+.allBonusesWrapper.amazing .bonuses{
+    color: black;
+    font-weight: bold;
+}
+
+.bonusesProductAmount{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.bonusesProductAmount.amazing{
+    font-size: inherit;
+}
+
+.cartBonusesWrapper{
+    font-size: 13px;
+    padding: 7px 0;
+    text-align: right;
+}
+
+.cartBonusesWrapper.amazing{
+    font-size: inherit;
+}
+
+.cartBonusesWrapper.perfume{
+    text-align: left;
+    color: white;
+}
+
+.cartBonusesWrapper.perfume a{
+    color: white;
+}
+
+
+.cartBonusesWrapper .success{
+    color: green;
+    margin-bottom: 10px;
+}
+
+.cartBonusesWrapper .errors{
+    color: red;
+}
+
+.cartBonusesWrapper .errors li{
+    margin-bottom: 10px;
+}
+
+.cartBonusesWrapper a{
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.cartBonusesWrapper a:hover{
+    text-decoration: none;
+}
+
+.bonusHistoryWrapper .bonusHistoryAmount{
+    font-size: 18px;
+}
+
+.bonusHistoryWrapper.flatlines .bonusHistoryAmount{
+    padding-bottom: 20px;
+}
+
+
+.bonusHistoryWrapper .tocenter{
+    text-align: center;
+}
+
+.bonusHistoryWrapper .bonusHistoryAmount .tocenter{
+    text-align: center;
+    
+}
+
+.bonusHistoryWrapper .bonusHistoryAmount .addFunds{
+    margin-top: 10px;
+    margin-left: 0px;
+    float: none;
+}
+
+.bonusHistoryWrapper .formSave{
+    margin-left: 0px;
+}
+
+
+.bonusHistoryWrapper .scost{
+    color: green;
+}
+
+.bonusHistoryWrapper .tcost{
+    color: red;
+}
+
+.bonusCardWrapper{
+    min-height: 300px;
+}
+
+.bonusCardWrapper .bonusCard{
+    display: inline-block;
+    background-color: #F29B30;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width:300px;
+}
+
+
+.bonusCardWrapper .amount{
+    padding-bottom: 10px;
+}
+
+.bonusCardWrapper .bonusCard .title{
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+.bonusCardWrapper .bonusCard .bonusCardTitle{
+    display: inline-block;
+    font-size: 18px;
+    background-color: white;
+    border:1px solid silver;
+    text-align: center;
+    width: 90%;
+}
+
+.bonusCardWrapper .tocenter{
+    text-align: center;
+}
+
+.bonusCardWrapper .noActive{
+    color: #FF2F2F; 
+}
+
+.bonusCardWrapper .formSave{
+    margin-left: 0px;
+}
+
+.bonusCardWrapper .empty {
+    text-align: center;
+    line-height: 300px;
+}
+
+.bonusPartnerCardsWrapper .cardActive{
+    color: green;
+    font-size: 12px;
+}
+
+.bonusPartnerCardsWrapper .cardDeactive{
+    color: red;
+    font-size: 12px;
+}
+
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable{
+    width: 100%;
+}
+
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable th{
+    font-weight: bold;
+}
+
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable th,
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable td{
+    font-size: 14px;
+    padding: 4px 10px 4px 3px;
+    border-bottom: 1px solid silver;
+}
+
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable .bonuses{
+    text-align: center;
+}
+
+.bonusPartnerCardsWrapper .cardAddedSuccess{
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.bonusPartnerCardsWrapper .bonusPartnerCardsTable .hide-desktop{
+    display: none;
+}
+
+.clearBoth{
+    clear: both;
+}
+
+@media (max-width: 720px){
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable th,
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable td{
+        display: block;
+        border-bottom: none;
+    }
+
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable td:nth-child(2){
+        border-bottom: 1px solid silver;
+        padding-top: 20px;
+    }
+
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable td:last-child{
+
+        padding-bottom: 20px;
+    }
+
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable .bonuses{
+        text-align: left;
+    }
+
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable .hide-mobile{
+        display: none;
+    }
+
+    .bonusPartnerCardsWrapper .bonusPartnerCardsTable .hide-desktop{
+        display: inline-block;
+    }
+}

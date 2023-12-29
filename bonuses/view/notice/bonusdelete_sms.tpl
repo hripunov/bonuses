@@ -1,0 +1,1 @@
+{t bonuses=$data->bonuses url=$url->getDomainStr()}С Вашего бонусного счёта снято %bonuses бонусных баллов. %url.{/t}

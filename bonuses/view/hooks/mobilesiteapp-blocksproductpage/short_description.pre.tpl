@@ -1,0 +1,1 @@
+<p padding-horizontal *ngIf="(product?.bonuses && (product.bonuses > 0))">+ <b>{literal}{{product?.bonuses}}{/literal}</b> бонуса(ов)</p>

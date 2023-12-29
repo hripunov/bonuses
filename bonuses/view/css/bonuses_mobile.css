@@ -1,0 +1,25 @@
+cartpage-blocks-cartpage .bonusesCartItem{
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.cartBonusesWrapper  .item-inner{
+    border-bottom: none !important;
+}
+
+.cartBonusesWrapper{
+    border-bottom: 1px solid #e8e8e8;
+}
+    
+.bonusesDescription{
+    width:100%;
+    padding-left: 72px;
+    box-sizing: border-box;
+}
+
+
+.ios .bonusesDescription{
+    padding-left: 56px;
+}

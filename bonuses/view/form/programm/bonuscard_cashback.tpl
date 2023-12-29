@@ -1,0 +1,1 @@
+{include file=$field->getOriginalTemplate() field=$elem.__bonuscard_cashback} {$elem.__bonuscard_cashback_type->formView()}

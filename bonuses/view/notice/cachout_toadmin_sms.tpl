@@ -1,0 +1,1 @@
+{t partner=$data->partner->getFio() url=$url->getDomainStr() amount=$data->amount}Создан запрос на вывод стредств партнером{/t}

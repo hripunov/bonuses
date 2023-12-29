@@ -1,0 +1,1 @@
+{$field->formView()} {$elem.__bonuses_up_type->formView()}

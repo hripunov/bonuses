@@ -1,0 +1,1 @@
+{t card=$data->card->getCardId()}Ваша бонусная карта %card активирована.{/t} {$url->getDomainStr()}.

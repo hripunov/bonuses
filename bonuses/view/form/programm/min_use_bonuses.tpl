@@ -1,0 +1,1 @@
+{$field->formView()} {$elem.__min_use_bonuses_type->formView()}
