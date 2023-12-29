@@ -8,6 +8,7 @@ use Bonuses\Model\BonusCardApi;
 use Bonuses\Model\BonusCommentApi;
 use Bonuses\Model\BonusDiscountApi;
 use Bonuses\Model\BonusProductDiscountApi;
+use Bonuses\Model\CartRules\RuleThenAddSpecBonuses;
 use Bonuses\Model\CashoutApi;
 use Bonuses\Model\Orm\AddCommentBonusesToProduct;
 use Bonuses\Model\Orm\BonusCard;
@@ -74,6 +75,7 @@ class Handlers extends \RS\Event\HandlerAbstract
             ->bind('cart.before.addorderdata')
             ->bind('cart.change')
             ->bind('cart.getcartdata')
+            ->bind('cartrules.getrules')
             ->bind('checkout.payment.list')
             ->bind('checkout.delivery.list')
             ->bind('controller.exec.shop-admin-discountctrl.index')
@@ -149,6 +151,16 @@ class Handlers extends \RS\Event\HandlerAbstract
         Product::attachClassBehavior(new CatalogProduct());
         User::attachClassBehavior(new UsersUser());
         Order::attachClassBehavior(new ShopOrder());
+    }
+
+    //
+    //  Добавляем правило корзины
+    //
+    public static function cartRulesGetRules($rules)
+    {
+        $rules[] = new RuleThenAddSpecBonuses();
+
+        return $rules;
     }
 
     /**
@@ -968,6 +980,13 @@ class Handlers extends \RS\Event\HandlerAbstract
         $config = Loader::byModule('bonuses');
 
         if ($flag == $order::INSERT_FLAG){ //Если идет вставка
+            //
+            //  Пишем спец. бонусы в заказ если их ещё нет
+            //
+            if ($order['rule_bonuses'] == 0) {
+                $order['rule_bonuses'] = $order->getRuleBonuses();
+            }
+
             if (isset($_SESSION['use_cart_bonuses']) && $_SESSION['use_cart_bonuses']){
                 $order['apply_bonusrules'] = 1;
                 //Запишем данные по корзине
@@ -1082,7 +1101,10 @@ class Handlers extends \RS\Event\HandlerAbstract
         $user    = $order->getUser();
 
         if ($user['id']){ //Только у тех у кого есть назначенный пользователь
-            $bonuses = $order->getBonuses(true);
+            //
+            //  Прибавка спец.бонусов к начислению
+            //
+            $bonuses = $order->getBonuses(true) + $order->rule_bonuses;
             $config  = Loader::byModule('bonuses');
 
             $api = new BonusApi();
@@ -1595,6 +1617,14 @@ class Handlers extends \RS\Event\HandlerAbstract
                     'hint' => t('Только если включена опция -<br/> Запретить перевод бонусов за товар в скидку в корзине по акции?'),
                     'default' => 0,
                     'userVisible' => $config['disable_use_product_by_action_in_cart'],
+                    'meVisible' => false,
+                )),
+                //
+                // Поле для спец. бонусов в заказе
+                //
+                'rule_bonuses' => new Type\Integer(array(
+                    'description' => t('Количество примененных спец бонусов пользователя'),
+                    'default' => 0,
                     'meVisible' => false,
                 )),
         ));

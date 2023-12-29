@@ -9,6 +9,25 @@ use Shop\Model\Orm\Order;
 */
 class ShopOrder extends \RS\Behavior\BehaviorAbstract
 {
+    //
+    //  Получение спец. бонусов
+    //
+    function getRuleBonuses() {
+        $order = $this->owner;
+        if ($order->rule_bonuses == 0) {
+            return $order->rule_bonuses;
+        }
+        else {
+            return -1;
+        }
+    }
+
+    //
+    //  Запись спец. бонусов
+    //
+    function setRuleBonuses($amount) {
+        $this->owner->rule_bonuses = $amount;
+    }
 
     /**
      * Получает бонусы, которые могут быть начислены за оформление заказа
@@ -27,7 +46,7 @@ class ShopOrder extends \RS\Behavior\BehaviorAbstract
         $cart_data = $order->getCart()->getCartData();
         $config = \RS\Config\Loader::byModule('bonuses');
 
-        $total_bonuses = $cart_data['total_bonuses'];
+        $total_bonuses = $cart_data['total_bonuses'] + $order['rule_bonuses'];
 
         if ($order['payment']){ //Если есть оплата, проверим нужно ли начислять бонусы
             $payment = $order->getPayment();
